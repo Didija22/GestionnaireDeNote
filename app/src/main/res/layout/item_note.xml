@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Une carte de note dans la liste. La couleur de fond est definie dans le NoteAdapter. -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/carteNote"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/marge_ecran"
+    android:layout_marginEnd="@dimen/marge_ecran"
+    android:layout_marginTop="@dimen/marge_carte"
+    android:layout_marginBottom="@dimen/marge_carte"
+    app:cardCornerRadius="@dimen/rayon_carte"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_carte">
+
+        <TextView
+            android:id="@+id/tvTitreNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/texte_titre4"
+            android:textStyle="bold"
+            tools:text="Note 1" />
+
+        <TextView
+            android:id="@+id/tvDateNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitreNote"
+            android:layout_marginTop="4dp"
+            android:alpha="0.85"
+            android:textColor="@color/white"
+            android:textSize="@dimen/texte_2"
+            tools:text="01 Juin 2026" />
+
+        <ImageView
+            android:id="@+id/ivFavori"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_badge_favori"
+            android:padding="6dp"
+            android:src="@drawable/ic_star"
+            android:contentDescription="@string/desc_favori"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

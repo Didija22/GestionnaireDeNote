@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Palette imposée par l'énoncé -->
+    <color name="gris">#828282</color>
+    <color name="vert">#219653</color>
+    <color name="rouge">#EB5757</color>
+    <color name="bleu">#2F80ED</color>
+    <color name="jaune">#F2C94C</color>
+    <color name="orange">#F2994A</color>
+
+    <!-- Mode clair -->
+    <color name="fond_ecran">#FFFFFF</color>
+    <color name="texte_secondaire">#9E9E9E</color>
+</resources>

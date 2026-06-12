@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Mes Notes</string>
+
+    <!-- Ecran liste -->
+    <string name="aucune_note">Aucune notes</string>
+    <string name="rechercher">Rechercher</string>
+    <string name="favoris">Favoris</string>
+
+    <!-- Formulaire -->
+    <string name="titre_indice">Titre</string>
+    <string name="contenu_indice">Contenu de la note…</string>
+    <string name="creer">Créer</string>
+    <string name="modifier">Modifier</string>
+
+    <!-- Messages -->
+    <string name="note_vide">Une note vide ne peut pas être enregistrée</string>
+    <string name="note_creee">Note créée</string>
+    <string name="note_modifiee">Note modifiée</string>
+    <string name="note_supprimee">Note supprimée</string>
+    <string name="ajoute_favoris">Ajoutée aux favoris</string>
+    <string name="retire_favoris">Retirée des favoris</string>
+
+    <!-- Options sur une note (partage / suppression) -->
+    <string name="partager">Partager</string>
+    <string name="supprimer">Supprimer</string>
+    <string name="annuler">Annuler</string>
+    <string name="confirmer_suppression">Voulez-vous vraiment supprimer cette note ?</string>
+
+    <!-- Descriptions accessibilite -->
+    <string name="desc_ajouter">Ajouter une note</string>
+    <string name="desc_favori">Note en favori</string>
+    <string name="trier">Date ↓</string>
+    <string name="mode_sombre">Mode sombre</string>
+    <string name="mode_clair">Mode clair</string>
+</resources>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fond_ecran"
+    tools:context=".MainActivity">
+
+    <!-- Barre du haut : champ de recherche + bouton Favoris -->
+    <LinearLayout
+        android:id="@+id/barreHaut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="@dimen/marge_ecran"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_barre_recherche"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_search"
+                android:contentDescription="@string/rechercher" />
+
+            <EditText
+                android:id="@+id/etRecherche"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="@string/rechercher"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="0dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/texte_secondaire"
+                android:textSize="@dimen/texte_1"
+                android:autofillHints="no" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnFavoris"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/bg_bouton_favoris"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="@string/favoris"
+            android:textColor="@color/black"
+            android:textSize="@dimen/texte_1"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+    <!-- Barre info : compteur + mode sombre + tri -->
+    <LinearLayout
+        android:id="@+id/barreInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/marge_ecran"
+        android:paddingEnd="@dimen/marge_ecran"
+        android:paddingBottom="4dp"
+        app:layout_constraintTop_toBottomOf="@id/barreHaut"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Compteur de notes -->
+        <TextView
+            android:id="@+id/tvCompteur"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/texte_secondaire"
+            android:textSize="@dimen/texte_2"
+            tools:text="3 notes" />
+
+        <!-- Bouton mode sombre -->
+        <TextView
+            android:id="@+id/btnModeSombre"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:layout_marginEnd="8dp"
+            android:text="🌙"
+            android:textSize="@dimen/texte_1"
+            android:background="@drawable/bg_bouton_favoris"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Bouton Trier -->
+        <TextView
+            android:id="@+id/btnTrier"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:text="@string/trier"
+            android:textColor="@color/texte_secondaire"
+            android:textSize="@dimen/texte_2"
+            android:background="@drawable/bg_bouton_favoris"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+    <!-- Liste des notes -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerNotes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="96dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/barreInfo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Message affiché quand il n'y a aucune note -->
+    <TextView
+        android:id="@+id/tvListeVide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/aucune_note"
+        android:textColor="@color/texte_secondaire"
+        android:textSize="@dimen/texte_1"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/recyclerNotes"
+        app:layout_constraintBottom_toBottomOf="@id/recyclerNotes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Palette de couleurs -->
+    <LinearLayout
+        android:id="@+id/paletteCouleurs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_palette"
+        android:elevation="6dp"
+        android:gravity="center_horizontal"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_marginEnd="@dimen/marge_ecran"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fabAjouter">
+
+        <ImageView
+            android:id="@+id/pastilleVert"
+            android:layout_width="@dimen/taille_pastille"
+            android:layout_height="@dimen/taille_pastille"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/bg_pastille_couleur"
+            android:backgroundTint="@color/vert"
+            android:contentDescription="@string/desc_ajouter" />
+
+        <ImageView
+            android:id="@+id/pastilleRouge"
+            android:layout_width="@dimen/taille_pastille"
+            android:layout_height="@dimen/taille_pastille"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/bg_pastille_couleur"
+            android:backgroundTint="@color/rouge"
+            android:contentDescription="@string/desc_ajouter" />
+
+        <ImageView
+            android:id="@+id/pastilleBleu"
+            android:layout_width="@dimen/taille_pastille"
+            android:layout_height="@dimen/taille_pastille"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/bg_pastille_couleur"
+            android:backgroundTint="@color/bleu"
+            android:contentDescription="@string/desc_ajouter" />
+
+        <ImageView
+            android:id="@+id/pastilleJaune"
+            android:layout_width="@dimen/taille_pastille"
+            android:layout_height="@dimen/taille_pastille"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/bg_pastille_couleur"
+            android:backgroundTint="@color/jaune"
+            android:contentDescription="@string/desc_ajouter" />
+
+        <ImageView
+            android:id="@+id/pastilleOrange"
+            android:layout_width="@dimen/taille_pastille"
+            android:layout_height="@dimen/taille_pastille"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/bg_pastille_couleur"
+            android:backgroundTint="@color/orange"
+            android:contentDescription="@string/desc_ajouter" />
+
+        <ImageView
+            android:id="@+id/pastilleGris"
+            android:layout_width="@dimen/taille_pastille"
+            android:layout_height="@dimen/taille_pastille"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/bg_pastille_couleur"
+            android:backgroundTint="@color/gris"
+            android:contentDescription="@string/desc_ajouter" />
+    </LinearLayout>
+
+    <!-- Bouton flottant d'ajout -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAjouter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marge_ecran"
+        android:src="@android:drawable/ic_input_add"
+        android:contentDescription="@string/desc_ajouter"
+        app:backgroundTint="@color/black"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

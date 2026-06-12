@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="fond_ecran">#121212</color>
+    <color name="texte_secondaire">#AAAAAA</color>
+    <color name="black">#FFFFFF</color>
+    <color name="white">#121212</color>
+</resources>

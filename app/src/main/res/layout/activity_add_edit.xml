@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/addEditRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fond_ecran"
+    android:padding="@dimen/marge_ecran">
+
+    <!-- Selecteur de couleur : permet de choisir ou de changer la couleur de la note -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="12dp">
+
+        <ImageView
+            android:id="@+id/pfVert"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_pastille_couleur"
+            android:backgroundTint="@color/vert"
+            android:contentDescription="@string/desc_ajouter" />
+
+        <ImageView
+            android:id="@+id/pfRouge"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_pastille_couleur"
+            android:backgroundTint="@color/rouge"
+            android:contentDescription="@string/desc_ajouter" />
+
+        <ImageView
+            android:id="@+id/pfBleu"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_pastille_couleur"
+            android:backgroundTint="@color/bleu"
+            android:contentDescription="@string/desc_ajouter" />
+
+        <ImageView
+            android:id="@+id/pfJaune"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_pastille_couleur"
+            android:backgroundTint="@color/jaune"
+            android:contentDescription="@string/desc_ajouter" />
+
+        <ImageView
+            android:id="@+id/pfOrange"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_pastille_couleur"
+            android:backgroundTint="@color/orange"
+            android:contentDescription="@string/desc_ajouter" />
+
+        <ImageView
+            android:id="@+id/pfGris"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_pastille_couleur"
+            android:backgroundTint="@color/gris"
+            android:contentDescription="@string/desc_ajouter" />
+    </LinearLayout>
+
+    <!-- Carte coloree contenant le titre et le contenu de la note -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/carteFormulaire"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="@dimen/rayon_carte"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_carte">
+
+            <EditText
+                android:id="@+id/etTitre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/titre_indice"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textColorHint="#CCFFFFFF"
+                android:textSize="@dimen/texte_titre3"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etContenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/transparent"
+                android:gravity="top"
+                android:hint="@string/contenu_indice"
+                android:inputType="textMultiLine"
+                android:textColor="@color/white"
+                android:textColorHint="#CCFFFFFF"
+                android:textSize="@dimen/texte_1" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Bouton principal : "Creer" en mode ajout, "Modifier" en mode edition -->
+    <TextView
+        android:id="@+id/btnEnregistrer"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="@dimen/marge_ecran"
+        android:background="@drawable/bg_bouton_principal"
+        android:gravity="center"
+        android:text="@string/creer"
+        android:textColor="@color/white"
+        android:textSize="@dimen/texte_titre4"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:focusable="true" />
+
+</LinearLayout>

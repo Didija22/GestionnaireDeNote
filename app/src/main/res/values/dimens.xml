@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Typographie imposee par l'enonce (Titre 3, Titre 4, Text 1, Text 2) -->
+    <dimen name="texte_titre3">24sp</dimen>
+    <dimen name="texte_titre4">16sp</dimen>
+    <dimen name="texte_1">14sp</dimen>
+    <dimen name="texte_2">12sp</dimen>
+
+    <!-- Espacements reutilises dans toute l'application -->
+    <dimen name="marge_ecran">16dp</dimen>
+    <dimen name="marge_carte">8dp</dimen>
+    <dimen name="padding_carte">16dp</dimen>
+    <dimen name="rayon_carte">12dp</dimen>
+    <dimen name="taille_pastille">40dp</dimen>
+</resources>

@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.GestionnaireNotes" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/vert</item>
+        <item name="colorPrimaryVariant">@color/vert</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:windowBackground">@color/fond_ecran</item>
+    </style>
+
+    <style name="Theme.GestionnaireNotes" parent="Base.Theme.GestionnaireNotes" />
+</resources>
