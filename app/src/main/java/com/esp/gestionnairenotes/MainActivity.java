@@ -1,5 +1,5 @@
 package com.esp.gestionnairenotes;
-//Ajout des imports 
+//Ajout des imports necessaires 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
