@@ -5,12 +5,14 @@ import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
 
+// fichier  Membre 1 
 // @Entity indique a Room que cette classe represente une table SQLite.
 // On garde Serializable pour pouvoir passer une Note d'une activite a l'autre via Intent.
 @Entity(tableName = "notes")
 public class Note implements Serializable {
 
-    // autoGenerate = true : c'est Room qui s'occupe de generer l'id automatiquement.
+    // autoGenerate = true : c'est Room qui s'occupe de generer l'id
+    // automatiquement.
     @PrimaryKey(autoGenerate = true)
     private int id;
 

@@ -7,6 +7,7 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 import java.util.List;
+// fichier  Membre 1 
 
 // @Dao : cette interface regroupe toutes les requetes SQL liees aux notes.
 // On evite ainsi d'ecrire du SQL un peu partout dans l'application.

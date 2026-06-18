@@ -6,8 +6,9 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+// fichier  Membre 1 
 // @Database : on indique a Room les entites qui composent la base et la version du schema.
-@Database(entities = {Note.class}, version = 1, exportSchema = false)
+@Database(entities = { Note.class }, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
     // Instance unique de la base (pattern singleton).
@@ -27,8 +28,7 @@ public abstract class AppDatabase extends RoomDatabase {
                     INSTANCE = Room.databaseBuilder(
                             context.getApplicationContext(),
                             AppDatabase.class,
-                            NOM_BASE
-                    ).build();
+                            NOM_BASE).build();
                 }
             }
         }
