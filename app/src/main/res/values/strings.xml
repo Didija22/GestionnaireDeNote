@@ -1,4 +1,6 @@
 <resources>
+
+<!-- Ressources texte -->
     <string name="app_name">Mes Notes</string>
 
     <!-- Ecran liste -->

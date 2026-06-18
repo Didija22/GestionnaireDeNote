@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+<!-- Dimensions -->
     <!-- Typographie imposee par l'enonce (Titre 3, Titre 4, Text 1, Text 2) -->
     <dimen name="texte_titre3">24sp</dimen>
     <dimen name="texte_titre4">16sp</dimen>
