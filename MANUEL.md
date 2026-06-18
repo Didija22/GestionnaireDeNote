@@ -11,8 +11,8 @@ Petit guide pour utiliser l'application **Gestionnaire de Notes**.
 3. Brancher un téléphone (ou lancer un émulateur)
 4. Cliquer sur **Run ▶️**
 
-> L'application s'ouvre sur la liste des notes. Au premier lancement, elle est vide
-> et affiche le message **« Aucune notes »**.
+> L'application s'ouvre sur la liste des notes. Au premier lancement, elle sera vide
+> et affichera le message **« Aucune notes »**.
 
 ---
 

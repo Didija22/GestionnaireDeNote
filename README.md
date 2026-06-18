@@ -12,7 +12,7 @@ Room, donc elles sont conservées après la fermeture de l'application.
 - Création d'une note (titre, contenu, couleur)
 - Consultation de toutes les notes
 - Modification d'une note (formulaire pré-rempli)
-- Mise en favori / retrait des favoris par **double clic** sur la note
+- Mise en favori/retrait des favoris par **double clic** sur la note
 - Recherche d'une note par son titre
 - Filtre pour n'afficher que les favoris
 - Choix parmi 6 couleurs
