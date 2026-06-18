@@ -89,6 +89,7 @@ public class AddEditActivity extends AppCompatActivity {
             noteAModifier = (Note) intent.getSerializableExtra(EXTRA_NOTE);
 
             if (noteAModifier != null) {
+                //préremplissage du formulaire avec les données de la note à modifier
                 etTitre.setText(noteAModifier.getTitre());
                 etContenu.setText(noteAModifier.getContenu());
                 appliquerCouleur(noteAModifier.getCouleur());
