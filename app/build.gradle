@@ -1,3 +1,4 @@
+//Fatoumata Bintou Traore
 plugins {
     alias(libs.plugins.android.application)
 }
