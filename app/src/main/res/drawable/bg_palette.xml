@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Drawable M4 : Khadidjatou Thiam-->
 <!-- Conteneur blanc arrondi qui regroupe les pastilles de couleur (voir maquette ecran 4) -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">

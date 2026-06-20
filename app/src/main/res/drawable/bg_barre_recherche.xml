@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Drawable M4 : Khadidjatou Thiam-->
 <!-- Champ de recherche arrondi avec une fine bordure grise (voir maquette ecran 3) -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">

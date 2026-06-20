@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Drawable M4 : Khadidjatou Thiam-->
 <!-- Gros bouton noir arrondi "Creer" / "Modifier" (voir maquettes ecrans 5 et 6) -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">

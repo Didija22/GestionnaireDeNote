@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Drawable M4 : Khadidjatou Thiam-->
 <!-- Pastille ronde de couleur. La couleur reelle est appliquee par backgroundTint. -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="oval">
